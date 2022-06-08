@@ -1,0 +1,39 @@
+<div class="card shadow">
+  <div class="card-header bg-primary">
+    <h4 class="fw-light text-white m-0 float-start">{{ player.name }}</h4>
+    <div class="btn-group float-end">
+      <button class="btn btn-sm btn-secondary" (click)="pass.emit()">
+        Pass
+      </button>
+      <button class="btn btn-sm btn-secondary" (click)="show.emit()">
+        Show
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <h6 class="card-subtitle text-muted" *ngIf="player.doesntHave?.length > 0">
+      Doesn't Have
+    </h6>
+    <span
+      *ngFor="let card of player.doesntHave"
+      class="badge bg-primary me-1"
+      >{{ card | card }}</span
+    >
+    <h6
+      class="card-subtitle text-muted mt-2"
+      *ngIf="player.hasOneOf?.length > 0"
+    >
+      Has One of
+    </h6>
+    <span *ngFor="let guess of player.hasOneOf" class="badge bg-dark me-1">{{
+      guess | card
+    }}</span>
+
+    <h6 class="card-subtitle text-muted mt-2" *ngIf="player.has?.length > 0">
+      Has
+    </h6>
+    <span *ngFor="let card of player.has" class="badge bg-info me-1">{{
+      card | card
+    }}</span>
+  </div>
+</div>

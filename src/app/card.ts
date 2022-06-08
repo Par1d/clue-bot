@@ -1,0 +1,25 @@
+export enum Card {
+  Col_Mustard,
+  Prof_Plum,
+  Mr_Green,
+  Mrs_Peacock,
+  Miss_Scarlett,
+  Mrs_White,
+
+  Knife,
+  Candlestick,
+  Revolver,
+  Rope,
+  Lead_Pipe,
+  Wrench,
+
+  Hall,
+  Lounge,
+  Dining_Room,
+  Kitchen,
+  Ball_Room,
+  Conservatory,
+  Billiard_Room,
+  Library,
+  Study,
+}

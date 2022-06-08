@@ -1,0 +1,36 @@
+<div class="container-fluid bg-powerful py-5">
+  <div class="container">
+    <h1 class="display-1 text-white">
+      <fa-icon [icon]="faUserSecret"></fa-icon> Clue Bot
+    </h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 mt-3">
+      <app-guess-control [guess]="guess"></app-guess-control>
+    </div>
+    <div class="col-lg-7 mt-3">
+      <app-envelope [cards]="bot.inEnvelope"></app-envelope>
+    </div>
+    <div
+      class="col-xxl-3 col-lg-4 col-md-6 mt-3"
+      *ngFor="let player of bot.players"
+    >
+      <app-player
+        [player]="player"
+        (pass)="playerPasses(player.name)"
+        (show)="playerShows(player.name)"
+      ></app-player>
+    </div>
+  </div>
+</div>
+<div class="container fixed-bottom">
+  <div class="row">
+    <div class="col text-end mb-3">
+      <button class="btn text-primary" (click)="undo()">
+        <fa-icon [icon]="faUndo" [size]="'3x'"></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>

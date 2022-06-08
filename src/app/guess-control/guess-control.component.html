@@ -1,0 +1,24 @@
+<div class="card shadow">
+  <h3 class="card-header bg-dark text-white fw-light">
+    Guess <fa-icon class="float-end" [icon]="faQuestion"></fa-icon>
+  </h3>
+  <div class="card-body">
+    <select class="form-select" [(ngModel)]="guess[0]">
+      <option *ngFor="let person of people" value="{{ person }}">
+        {{ person | card }}
+      </option>
+    </select>
+
+    <select class="form-select mt-2" [(ngModel)]="guess[1]">
+      <option *ngFor="let weapon of weapons" value="{{ weapon }}">
+        {{ weapon | card }}
+      </option>
+    </select>
+
+    <select class="form-select mt-2" [(ngModel)]="guess[2]">
+      <option *ngFor="let room of rooms" value="{{ room }}">
+        {{ room | card }}
+      </option>
+    </select>
+  </div>
+</div>

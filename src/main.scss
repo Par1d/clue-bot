@@ -1,0 +1,30 @@
+body {
+  margin: 0px;
+}
+
+$info: #e23e57;
+$secondary: #88304e;
+$primary: #522546;
+$dark: #311d3f;
+
+@import '~bootstrap/scss/bootstrap';
+
+.bg-powerful {
+  background: linear-gradient(
+    90deg,
+    rgba(49, 29, 63, 1) 0%,
+    rgba(82, 37, 70, 1) 50%,
+    rgba(136, 48, 78, 1) 100%
+  );
+}
+
+.text-powerful {
+  background: linear-gradient(
+    90deg,
+    rgba(49, 29, 63, 1) 0%,
+    rgba(82, 37, 70, 1) 50%,
+    rgba(136, 48, 78, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
